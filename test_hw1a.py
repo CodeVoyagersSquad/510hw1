@@ -6,4 +6,4 @@ def test_multiply():
     assert multiply_numbers(2, 3) == 6  # This should pass
 
 def test_error():
-    assert multiply_numbers(2, 4) == 8  # This should fail, showing the test framework catching the error
+    assert multiply_numbers(2, 4) == 7  # This should fail, showing the test framework catching the error

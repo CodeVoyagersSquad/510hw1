@@ -28,7 +28,10 @@ jobs:
         sudo apt update -y
         sudo apt install python3.13 -y
         sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.13 1
-        sudo apt install python3.13-distutils -y
+    - name: Install distutils using pip
+      run: |
+        python3 -m ensurepip --upgrade
+        python3 -m pip install setuptools
     - name: Verify Python 3.13 installation
       run: python3 --version
     

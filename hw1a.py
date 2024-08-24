@@ -6,5 +6,5 @@ print("The product is:", result)
 
 print("The result is:", result)
 
-for i in range(5):
+for i in range(4):
     print(i)

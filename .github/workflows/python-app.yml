@@ -49,11 +49,11 @@ jobs:
         pip install pytest pytest-cov
         pytest test_hw1a.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
 
-    # - name: Upload coverage to Codecov
-    #   uses: codecov/codecov-action@v3
-    #   with:
-    #     token: UXCNOWHH2O
-    #     files: ./coverage.xml
-    #     flags: unittests
-    #     name: codecov-coverage
-    #     fail_ci_if_error: true
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v5
+      with:
+        token: UXCNOWHH2O
+        files: ./coverage.xml
+        flags: unittests
+        name: codecov-coverage
+        fail_ci_if_error: true

@@ -46,7 +46,7 @@ jobs:
       run: |
         pip install pytest pytest-cov
         pytest hw2/test_hw2.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
-        pytest --cov
+        pytest hw2 --cov
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v4

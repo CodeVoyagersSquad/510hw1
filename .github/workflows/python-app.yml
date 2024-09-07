@@ -29,6 +29,18 @@ jobs:
       run: |
         python -m pip install --upgrade pip
 
+    - name: Lint with flake8
+      run: |
+        flake8 hw2/hw2_debugging.py hw2/rand.py > post_traces/flake8_trace.txt
+
+    - name: Lint with pylint
+      run: |
+        pylint hw2/hw2_debugging.py hw2/rand.py > post_traces/pylint_trace.txt
+
+    - name: Static analysis with bandit
+      run: |
+        bandit hw2/hw2_debugging.py hw2/rand.py > post_traces/bandit_trace_fixed.txt
+
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov

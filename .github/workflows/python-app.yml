@@ -15,7 +15,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - uses: actions/checkout@v4
@@ -35,10 +35,10 @@ jobs:
     # - name: Verify Python 3.13 installation
     #   run: python3 --version
     
-    - name: Set up Python 3.12
+    - name: Set up Python 3.13
       uses: actions/setup-python@v5
       with:
-        python-version: "3.12"
+        python-version: "3.13.0-rc.1"
     
     - name: Install dependencies
       run: |

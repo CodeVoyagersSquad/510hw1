@@ -31,15 +31,15 @@ jobs:
 
     - name: Lint with flake8
       run: |
-        flake8 hw2/hw2_debugging.py hw2/rand.py > post_traces/flake8_trace.txt
+        flake8 hw2/hw2_debugging.py hw2/rand.py > hw2/post_traces/flake8_trace.txt
 
     - name: Lint with pylint
       run: |
-        pylint hw2/hw2_debugging.py hw2/rand.py > post_traces/pylint_trace.txt
+        pylint hw2/hw2_debugging.py hw2/rand.py > hw2/post_traces/pylint_trace.txt
 
     - name: Static analysis with bandit
       run: |
-        bandit hw2/hw2_debugging.py hw2/rand.py > post_traces/bandit_trace_fixed.txt
+        bandit hw2/hw2_debugging.py hw2/rand.py > hw2/post_traces/bandit_trace_fixed.txt
 
     - name: Test with pytest
       run: |
